@@ -1,18 +1,5 @@
-# Task 1b
-Branch **junota** contains Jurij's implementation of task 1b. The following improvements should be made:
-* [x]  The code should print to an output file (the output part is still not implemented yet).
-* [x]  Try with standardization of X,y and then destandardization.
-* [ ]  Try with RidgeCV and LassoCV with more intemediate lambdas.
-* [x]  Try without fit intercept and the 21st constant feature (one should reconstruct the value of the 21st coefficient from the destandardization process).
+## Task 1b
 
-Please update this list with all the relevant informations, intuitions et similia.
+This task was about Lasso and Ridge regression and cross-validation.
 
-`#Retrieve parameter`\
-`print(reg.coef_)`\
-`print(reg.intercept_)`\
-`print(reg.alpha_)`\
-`print("\n")`\
-`i = 0`\
-`for row in reg.mse_path_:`\
-`   print("{} {}".format(reg.alphas_[i],np.mean(row)))`\
-`   i+=1`
+Given a set of d+1-dimensional training samples from a CSV file, the code in ```main.py``` computes a set of non-linear responses of the feature vectors and then trains a LASSO regression model using sk-learn. The choice of the regularization coefficient is made through cross-validation.
